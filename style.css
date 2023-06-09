@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: "Anton", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: #e2e1e1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 96px auto;
+  padding: 24px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 1px 0 5px 0px #00000099;
+  padding: 32px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+}
+
+[alt="quotation logo"] {
+  position: absolute;
+  top: 8px;
+  right: 101px;
+  height: 135px;
+  z-index: 0;
+}
+
+.card__img {
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid rgb(171, 81, 231);
+  margin-bottom: 16px;
+}
+
+.card__quote {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  z-index: 1;
+  position: relative;
+}
+
+.card__name h6 {
+  opacity: 50%;
+}
+
+.card__text {
+  opacity: 70%;
+  font-size: 16px;
+  text-justify: justify;
+}
+
+.card--bg-purple {
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  grid-column: 1 / 3;
+  position: relative;
+}
+
+.card--bg-grey {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+.card--bg-darkGrey {
+  background-color: hsl(219, 29%, 14%);
+  color: #fff;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+.card--bg-white {
+  background-color: hsl(0, 0%, 100%);
+  color: #333;
+}
+
+.kira {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: block;
+  }
+  .card {
+    margin-bottom: 32px;
+  }
+  [alt="quotation logo"] {
+    top: 48px;
+    right: 16px;
+    height: 80px;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 950px) {
+  [alt="quotation logo"] {
+    display: none;
+  }
+}
